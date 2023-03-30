@@ -1,0 +1,481 @@
+body{
+  background: url(img/bckgrnd.avif) repeat center fixed;
+  background-size: cover;  
+  animation: bckgrnd 8s cubic-bezier(0.7, 0, 0.84, 0) 0ms infinite alternate both;
+  margin:0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: grid;
+}
+
+@keyframes bckgrnd {
+	0% {
+		background-position: left center;
+		background-size: 100%;
+	}
+	100% {
+		background-position: left center;
+		background-size: 150%;
+	}
+}
+
+      /*    HEADER  */
+.header { 
+  position: absolute; 
+  font-size: 52px;
+  width:100%;
+  top: 125px;
+  margin-left: 20px;
+}
+.neon {
+  color: rgba(255, 255, 255, 0);
+  text-shadow: 0 0 2px #ffffff, 0 0 15px #70ffff, 0 0 20px #46fcffee, 0 0 40px #46fdff;
+}
+
+
+      /*    NAVIGATION BAR */
+.navbar {
+  background-color: rgb(12, 52, 75);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: right;
+  display: block;
+  color: rgba(141, 10, 91, 0);
+  text-shadow: 0 0 2px #ffffff, 0 0 15px #70ffff, 0 0 20px #46fcffee, 0 0 40px #46fdff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: #a51162;
+  color: white;
+} 
+
+a {
+  color: inherit;
+  text-decoration: none;
+  background:
+    linear-gradient(to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1) ),
+    linear-gradient(to right,
+      rgb(238, 36, 114),
+      rgb(190, 20, 212),
+      rgb(55, 151, 247) );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 700ms;
+}
+
+a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+/*    Animated Border*/
+.box{  /* For about page only*/
+  position: absolute;
+  width: 55%;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  background:#0e1538;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #000;
+  right: 1vw;
+  bottom: 4vh;
+}
+.box p{
+	position: relative;
+	color: #fff;
+	font-size: 18px;
+	z-index: 10;
+  margin: 30px;
+}
+.box::before{
+	content: '';
+	position: absolute;
+	width: 125%;
+	height: 140%;
+	background: linear-gradient(#00ccff, #d400d4);
+	animation: animate 6s linear infinite;
+	box-shadow: 0 0 20px  #999;
+}
+.box::after{
+	content: '';
+	position: absolute;
+	inset: 4px;
+	background: #250e38;
+	border-radius: 16px;
+}
+
+@keyframes animate {
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+/*    Grid Layout for Index Page*/
+.rowindex {
+  display: flex;
+  flex-wrap: no-wrap;
+  position: center;
+  justify-content:space-evenly;
+  padding: 2px;
+  margin-top: 375px;
+  margin-left: 40px;
+
+}
+
+/* Create 4 equal columns that sits next to each other */
+.columnindex {
+  flex: 25%;
+  padding: 5px;
+}
+
+.columnindex img {
+  margin-top: 8px;
+  border-style: groove;
+  border: #0e1538, 5px;
+  height: 12vw;
+  width: 20vw;
+}
+
+/*    CHOOSE ROW OPTION (ROW 1, 2, 3)
+To add rows, copy blocks for .row2, change to coresponding #(.row3, .row4)*/
+.row1 {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  align-content: space-between;
+  height: 8vh;
+  width: 95vw;
+  margin-top: 375px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row1 img {
+  border: #0e1538 5px groove;
+  height: 28vh;
+  width: 100%; 
+}
+
+.row1>div{
+  box-sizing:border-box;
+}
+
+
+.row2 {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  align-content: space-between;
+  height: 8vh;
+  width: 95vw;
+  margin-top: 160px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+.row2 img {
+  border: #0e1538 5px groove;
+  height: 28vh;
+  width: 100%; 
+}
+
+.row2>div{
+  box-sizing:border-box;
+}
+
+
+.row3 {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  align-content: space-between;
+  height: 8vh;
+  width: 95vw;
+  margin-top: 160px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+.row3 img {
+  border: #0e1538 5px groove;
+  height: 28vh;
+  width: 100%; 
+}
+
+.row3>div{
+  box-sizing:border-box;
+}
+
+/*    CHOOSE COLUMN OPTION (COL A, B, C, D)*/
+
+/* OPTION A  - SM, SM, BIG */
+ .leftcolumnA { 
+  grid-column: 1/2;   
+} 
+
+.centercolumnA { 
+  grid-column: 2/3; 
+} 
+
+.rightcolumnA {
+  grid-column: 3/5;
+}
+
+
+/* OPTION B  - BIG, SM, SM*/
+.leftcolumnB {   
+ grid-column: 1/3;
+} 
+
+.centercolumnB {
+grid-column: 3/4;
+}
+
+.rightcolumnB {
+  grid-column: 4/5;
+}
+
+/* OPTION C  - BIG, BIG*/
+.leftcolumnC {   
+  grid-column: 1/3;
+ } 
+ 
+ .rightcolumnC {
+   grid-column: 3/5;
+ }
+
+ /* OPTION D - SM, BIG, SM*/
+.leftcolumnD {   
+  grid-column: 1/2;
+ } 
+ 
+ .centercolumnD {
+ grid-column: 2/4;
+ }
+ 
+ .rightcolumnD {
+   grid-column: 4/5;
+ }
+
+ .img a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+	 @media only screen and (max-width: 800px)  {
+    .header { 
+      position: relative;  
+      font-size: 20px;
+      width:100%;
+      top: 25px;
+      padding: 0px;
+      margin-left: 30%;
+      margin-right: 30%;
+    }
+    .navbar a {
+      text-shadow: 0 0 2px #ffffff, 0 0 5px #70ffff, 0 0 7px #46fcffee, 0 0 15px #46fdff;
+      padding: 5px 6px;
+      font-size: 14px;
+    }
+
+    .box{
+        position: absolute;
+        width: 95%;
+        height: 75vh;
+        overflow:scroll;
+        justify-content: center;
+        align-items: center;
+        background:#0e1538;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 0 10px #000;
+        right: 1vw;
+        bottom: 4vh;
+      }
+      .box p{
+        position: relative;
+        color: #fff;
+        font-size: 14px;
+        z-index: 10;
+        margin: 30px;
+      }
+    
+
+		.rowindex {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2px;
+      margin-top: 25px;
+      margin-left: 30%;
+      margin-right: 30%;
+    
+    }    
+    .columnindex {
+      flex: 50%;
+      padding: 5px;
+      display:block;
+      justify-content:space-evenly;
+    }
+   .columnindex img {
+      margin-top: 8px;
+      border-style: groove;
+      border: #0e1538, 5px;
+      height: 28vw;
+      width: 60vw;
+    } 
+
+
+    .row1 {
+      display: flex;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: auto;
+      flex-wrap: wrap;
+      grid-gap: 20px;
+      align-content: space-between;
+      height: 8vh;
+      width: 95vw;
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .row1 img {
+      border: #0e1538 5px groove;
+      height: 28vh;
+      width: 50%; 
+    }
+    
+    
+    .row2 {
+      display: flex;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: auto;
+      flex-wrap: wrap;
+      grid-gap: 20px;
+      align-content: space-between;
+      height: 8vh;
+      width: 95vw;
+      margin-top: auto;
+      margin-left: auto;
+      margin-right: auto;
+     
+    }
+    .row2 img {
+      border: #0e1538 5px groove;
+      height: 28vh;
+      width: 50%; 
+    }
+    
+
+    .row3 {
+      display: flex;
+      flex-wrap: wrap;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: auto;
+      grid-gap: 20px;
+      align-content: space-between;
+      height: 8vh;
+      width: 95vw;
+      margin-top: auto;
+      margin-left: auto;
+      margin-right: auto;
+     
+    }
+    .row3 img {
+      border: #0e1538 5px groove;
+      height: 28vh;
+      width: 50%; 
+    }
+ 
+    .rightcolumnA {
+      display:flex;
+    }
+    
+    
+    /* OPTION B  - BIG, SM, SM*/
+    .leftcolumnB {   
+      display: flex;
+      flex: 100%;
+    } 
+    
+    .centercolumnB {
+      display: flex;
+      flex:50%;
+      float: left;
+    }
+    
+    .rightcolumnB {
+      display: flex;
+      flex: 50%;
+      float: right;
+    }
+    
+    /* OPTION C  - BIG, BIG*/
+    .leftcolumnC {   
+      display: flex;
+      flex: 100%;
+     } 
+     
+     .rightcolumnC {
+      display: flex;
+      flex: 100%;
+     }
+    .leftcolumnD {   
+      display:flex;
+     } 
+     
+     .centercolumnD {
+      display:flex;
+     }
+     
+     .rightcolumnD {
+      display:flex;
+     }
+
+
+  }
+
+    
+      
+    
+     
+
+   
+   
+    
+   
+    
+  
+    
+  
+     
+  
+    
+	
+
+
